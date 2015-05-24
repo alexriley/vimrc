@@ -11,11 +11,16 @@ set expandtab
 set pastetoggle=<F2>
 filetype plugin indent on
 set rnu
-
+" Stop using arrows:
 nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
+
+vnoremap <Left> :echoe "Use h"<CR>
+vnoremap <Right> :echoe "Use l"<CR>
+vnoremap <Up> :echoe "Use k"<CR>
+vnoremap <Down> :echoe "Use j"<CR>
 " No ex mode
 nnoremap Q :echoe "no ex mode"<CR>
 " Easier movement for Dvorak (hjkl are unintuitive)
@@ -25,6 +30,12 @@ nnoremap j k
 nnoremap k l
 nnoremap h ;
 nnoremap l q
+vnoremap ; h
+vnoremap q j
+vnoremap j k
+vnoremap k l
+vnoremap h ;
+vnoremap l q
 " Simpler switching between splits
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
