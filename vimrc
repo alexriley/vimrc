@@ -3,19 +3,28 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 let mapleader = ","
 let g:NERDTreeShowHidden=1
-filetype plugin indent on
 syn on se title
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
 set pastetoggle=<F2>
+filetype plugin indent on
+set rnu
 
 nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
-
+" No ex mode
+nnoremap Q :echoe "no ex mode"<CR>
+" Easier movement for Dvorak (hjkl are unintuitive)
+nnoremap ; h
+nnoremap q j
+nnoremap j k
+nnoremap k l
+nnoremap h ;
+nnoremap l q
 " Simpler switching between splits
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
