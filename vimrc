@@ -11,6 +11,13 @@ set expandtab
 set pastetoggle=<F2>
 filetype plugin indent on
 set rnu
+" Ctrl-p.vim:
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+" vim-airline:
+Helptags
+set laststatus=2
+set ttimeoutlen=50
 " Stop using arrows:
 map <Left> :echoe "Use h"<CR>
 map <Right> :echoe "Use l"<CR>
