@@ -12,34 +12,23 @@ set pastetoggle=<F2>
 filetype plugin indent on
 set rnu
 " Stop using arrows:
-nnoremap <Left> :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up> :echoe "Use k"<CR>
-nnoremap <Down> :echoe "Use j"<CR>
-
-vnoremap <Left> :echoe "Use h"<CR>
-vnoremap <Right> :echoe "Use l"<CR>
-vnoremap <Up> :echoe "Use k"<CR>
-vnoremap <Down> :echoe "Use j"<CR>
+map <Left> :echoe "Use h"<CR>
+map <Right> :echoe "Use l"<CR>
+map <Up> :echoe "Use k"<CR>
+map <Down> :echoe "Use j"<CR>
 " No ex mode
-nnoremap Q :echoe "no ex mode"<CR>
+map Q :echoe "no ex mode"<CR>
 " Easier movement for Dvorak (hjkl are unintuitive)
-nnoremap ; h
-nnoremap q j
-nnoremap j k
-nnoremap k l
-nnoremap h ;
-nnoremap l q
-vnoremap ; h
-vnoremap q j
-vnoremap j k
-vnoremap k l
-vnoremap h ;
-vnoremap l q
-" Simpler switching between splits
+" nnoremap ; h
+" nnoremap q j
+" nnoremap j k
+" nnoremap k l
+" nnoremap h ;
+" nnoremap l q
+" Simpler swjtching between splits
+nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
-nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
 " Toggle nerdtree with F10
@@ -49,8 +38,6 @@ map <F9> :NERDTreeFind<CR>
 
 " Display index number beside tabs:
 " Taken from http://superuser.com/a/614424
-"  
-" 
 set tabline=%!MyTabLine()  " custom tab pages line
 function MyTabLine()
         let s = '' " complete tabline goes here
