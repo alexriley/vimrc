@@ -35,7 +35,18 @@ nnoremap <C-l> <C-w>l
 map <F10> :NERDTreeToggle<CR>
 " Current file in nerdtree
 map <F9> :NERDTreeFind<CR>
+" Mustanng Color scheme:
+" color scheme from:
+" http://hcalves.deviantart.com/art/Mustang-Vim-Colorscheme-98974484
+" Logic below from: http://nvie.com/posts/how-i-boosted-my-vim/
+if &t_Co >= 256 || has("gui_running")
+    colorscheme mustang
+endif
 
+if &t_Co > 2 || has("gui_running")
+    " switch syntax highlighting on, when the terminal has colors
+    syntax on
+endif
 " Display index number beside tabs:
 " Taken from http://superuser.com/a/614424
 set tabline=%!MyTabLine()  " custom tab pages line
