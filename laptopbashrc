@@ -5,19 +5,19 @@
 # If not running interactively, don't do anything
 
 # add it only if required
-NPATH="~/.gem/ruby/2.2.0/bin"
-case ":${PATH}:" in
-	*:${NPATH}:*) ;;
-	*) PATH=${PATH}:$NPATH ;;
-esac
-export PATH
+# NPATH="~/.gem/ruby/2.2.0/bin"
+# case ":${PATH}:" in
+# 	*:${NPATH}:*) ;;
+# 	*) PATH=${PATH}:$NPATH ;;
+# esac
+# export PATH
 
 [[ $- != *i* ]] && return
-
 alias ls='ls -l --color'
 alias update='yaourt -Syua'
 alias justupdate='yaourt --sucre'
 alias amionline='ping google.com -c 3'
-PS1='[\u@\h \W]\$ '
+# PS1='[\u@\h \W]\$ '
+export PS1='\[\e]0;\w\a\]\n\[\e[32m\]\u@\h: \[\e[33m\]\w\[\e[0m\]\n\$ '
 export EDITOR='vim'
 export VISUAL='gedit'
