@@ -58,8 +58,6 @@ map <F10> :NERDTreeToggle<CR>
 " Current file in nerdtree
 map <F9> :NERDTreeFind<CR>
 " Mustanng Color scheme:
-" color scheme from:
-" http://hcalves.deviantart.com/art/Mustang-Vim-Colorscheme-98974484
 " Logic below from: http://nvie.com/posts/how-i-boosted-my-vim/
 if &t_Co >= 256 || has("gui_running")
     colorscheme mustang
