@@ -68,3 +68,21 @@ if &t_Co > 2 || has("gui_running")
     syntax on
 endif
 
+silent !mkdir ~/.vimbackup > /dev/null 2>&1
+silent !mkdir ~/.vimbackup/backup > /dev/null 2>&1
+silent !mkdir ~/.vimbackup/swap > /dev/null 2>&1
+silent !mkdir ~/.vimbackup/undo > /dev/null 2>&1
+
+"if !isdirectory("$HOME/.vimbackup/backup")
+"    call mkdir("$HOME/.vimbackup/backup", "p")
+"endif
+"if !isdirectory("$HOME/.vimbackup/swap")
+"    call mkdir("$HOME/.vimbackup/swap", "p")
+"endif
+"if !isdirectory("$HOME/.vimbackup/undo")
+"    call mkdir("$HOME/.vimbackup/undo", "p")
+"endif
+
+set backupdir=$HOME/.vimbackup/backup//
+set directory=$HOME/.vimbackup/swap//
+set undodir=$HOME/.vimbackup/undo//
