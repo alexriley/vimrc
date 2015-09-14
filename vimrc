@@ -1,4 +1,5 @@
 set nocompatible
+set t_Co=256
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 let mapleader = ","
@@ -86,3 +87,4 @@ silent !mkdir ~/.vimbackup/undo > /dev/null 2>&1
 set backupdir=$HOME/.vimbackup/backup//
 set directory=$HOME/.vimbackup/swap//
 set undodir=$HOME/.vimbackup/undo//
+
